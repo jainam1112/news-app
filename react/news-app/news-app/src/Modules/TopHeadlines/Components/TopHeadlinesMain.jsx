@@ -5,14 +5,32 @@ import { UserContext } from "../../../providers/UserProvider";
 import { Input, Card, Button} from 'antd';
 import service from "./../../../services/service"
 import "./../../TopHeadlines/TopHeadlines.scss";
-import { updateFavKeywords } from "../../../firebase"
+import { updateFavKeywords, getUserDocument} from "../../../firebase"
 import { List, Avatar, Tooltip,message} from 'antd';
+      
 const { Search } = Input;
 function TopHeadlinesMain(){
+  const user = useContext(UserContext);
+  const [userData,setuserData] = useState(null)
     useEffect(() => {
-        getTopHeadlines("country=in");
+        getTopHeadlines("lang=en");
       }, []);
-      
+      useEffect(() => {
+        if(user){
+      async function fetchMyAPI() {
+        const response = await getUserDocument(user.uid)
+        setuserData(response)
+      }
+  
+      fetchMyAPI()
+  }
+    }, [user])
+    useEffect(() => {
+       
+      if(userData && userData.favourites){
+          setfollowing(userData.favourites)
+      }
+   }, [userData]);
       const [tableData, SettableData] = useState([]);
       const [timer, Settimer] = useState([]);
       const [searchkeyword,setsearchkeyword] = useState("")
@@ -21,12 +39,12 @@ function TopHeadlinesMain(){
         const newdate = new Date(date);
         return newdate.toLocaleDateString("en-US");
       };
-      const user = useContext(UserContext);
+
 
       useEffect(() => {
         const timer = setTimeout(() => {
             if(searchkeyword === ""){
-                getTopHeadlines("country=in");
+                getTopHeadlines("lang=en");
             }else{
                 getTopHeadlines(`q=${searchkeyword}`)
             }
@@ -67,9 +85,9 @@ function TopHeadlinesMain(){
         setsearchkeyword(value)
        
         if(value === ""){
-            getTopHeadlines("country=in");
+            getTopHeadlines("lang=en");
         }else{
-            if(user.favourites && following.length < 1){
+            if(user && user.favourites && following.length < 1){
               setfollowing(user.favourites)
             }
             getTopHeadlines(`q=${value}`)
@@ -111,7 +129,7 @@ function TopHeadlinesMain(){
           <img
             width={272}
             alt="logo"
-            src={item.urlToImage ? item.urlToImage : "https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" }
+            src={item.image ? item.image : "https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" }
           />
         }
       >

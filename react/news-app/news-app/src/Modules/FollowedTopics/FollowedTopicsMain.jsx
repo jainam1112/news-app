@@ -57,7 +57,7 @@ function FollowedTopicsMain(){
         return () => clearTimeout(timer);
       }, [timer]);
       const getTopHeadlines = (query) => {
-        service.getNewsData(`/everything?${query}`, isSuccess, isError);
+        service.getNewsData(`/search?${query}`, isSuccess, isError);
         var today = new Date(),
         time = today.toLocaleString();
         Settimer(time)
@@ -172,7 +172,7 @@ for (let i = 0; i < following.length; i++) {
           <img
             width={272}
             alt="logo"
-            src={item.urlToImage ? item.urlToImage : "https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" }
+            src={item.image ? item.image : "https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" }
           />
         }
       >

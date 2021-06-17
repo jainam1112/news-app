@@ -12,7 +12,7 @@ const service = {
   async getNewsData(url, isSuccess, isError) {
     // Store.dispatch(setSpinnerFlag(true));
     axios
-      .get(this.baseURL + url + "&apiKey=" + environment.API_KEY, { headers: service.serviceHeader })
+      .get(this.baseURL + url + "&token=" + environment.API_KEY, { headers: service.serviceHeader })
       .then((response) => {
         // Store.dispatch(setSpinnerFlag(false));
         if (response.status === 200) {
