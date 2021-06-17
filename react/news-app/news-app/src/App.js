@@ -2,9 +2,7 @@
 import "./App.scss";
 import "antd/dist/antd.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useContext } from "react";
 import UserProvider from "./providers/UserProvider";
-import { withRouter } from "react-router-dom";
 import { Route, Switch } from "react-router";
 import HeaderMenu from "./Modules/Utilities/HeaderMenu"
 import TopHeadlinesMain from "./Modules/TopHeadlines/Components/TopHeadlinesMain"

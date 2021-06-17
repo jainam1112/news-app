@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import * as React from "react";
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../../../providers/UserProvider";
@@ -5,8 +6,7 @@ import { Input, Card, Button} from 'antd';
 import service from "./../../../services/service"
 import "./../../TopHeadlines/TopHeadlines.scss";
 import { updateFavKeywords } from "../../../firebase"
-import { List, Avatar, Space, Tooltip,message} from 'antd';
-import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
+import { List, Avatar, Tooltip,message} from 'antd';
 const { Search } = Input;
 function TopHeadlinesMain(){
     useEffect(() => {

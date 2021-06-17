@@ -1,13 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import * as React from "react";
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../../providers/UserProvider";
-import { Input, Card, Button} from 'antd';
+import { Card, Button} from 'antd';
 import service from "./../../services/service"
 import "./../TopHeadlines/TopHeadlines.scss";
 import { updateFavKeywords, getUserDocument} from "../../firebase"
 
-import { List, Avatar, Space, Tooltip, AutoComplete, Empty, message} from 'antd';
-const { Search } = Input;
+import { List, Avatar,  Tooltip, AutoComplete, Empty, message} from 'antd';
+
 function FollowedTopicsMain(){
     const user = useContext(UserContext);
       

@@ -25,7 +25,7 @@ const service = {
         ////console.log(error)
         console.log("====error===");
         console.log(error);
-        if (error?.response?.status == 401) {
+        if (error?.response?.status === 401) {
         //   Store.dispatch(setSessionTimeOut(true));
           localStorage.clear();
         } else isError(error);

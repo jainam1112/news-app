@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect,useContext } from "react";
 import { Header } from "antd/lib/layout/layout";
 import { UserContext } from "../../providers/UserProvider";
-import { Popover, Button, Menu, Avatar } from "antd";
+import {  Button, Menu, Avatar } from "antd";
 import logo from "./../../assets/logo.svg";
 import { Link } from "react-router-dom";
 import { DownOutlined, LoginOutlined } from "@ant-design/icons";

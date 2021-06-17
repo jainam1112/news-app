@@ -1,14 +1,13 @@
 import * as React from "react";
-import { useState, useEffect, useContext } from "react";
-import { Input, Card, Space, Button,Tabs } from 'antd';
-import { Link, Redirect } from "react-router-dom";
+import {  useContext } from "react";
+import {  Card, Space, Button,Tabs } from 'antd';
+import { Redirect } from "react-router-dom";
 import { UserContext } from "../../providers/UserProvider";
 import { signInWithGoogle } from "./../../firebase";
-import { DownloadOutlined, LoginOutlined ,GoogleCircleFilled, GoogleSquareFilled} from '@ant-design/icons';
+import { LoginOutlined ,GoogleCircleFilled, GoogleSquareFilled} from '@ant-design/icons';
 import logo from './../../assets/logo.svg'
 import "./AuthMain.scss"
 const { TabPane } = Tabs;
-const { Meta } = Card;
 function AuthMain(){
 
 
