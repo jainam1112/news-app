@@ -1,0 +1,172 @@
+@import "./../../Style.scss" ;
+.header {
+  font-family: Inter;
+  font-style: normal;
+  background-color: #ffffff;
+  display: inline-flex;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  padding: 0 80px;
+  height: 72px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+.rightNavSection {
+  margin-left: auto;
+  padding: 0 24px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightNavSection .rightMenuItem {
+  margin-left: 16px;
+  width: 196px;
+  height: 48px;
+  background-color: #fb8500;
+  border-radius: 3px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.rightNavSection .freetrial {
+  width: 196px;
+  height: 48px;
+  background-color: #023047;
+  border-radius: 3px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+.rightNavSection {
+  height: 100%;
+  .ant-menu-horizontal,
+  :hover,
+  .ant-menu-submenu:hover {
+    border-bottom: 0px !important;
+  }
+  .ant-menu-submenu-open {
+    border-bottom: 0px;
+    height: 100%;
+  }
+}
+.leftNavSection {
+  width: 100%;
+  height: 100%;
+  margin-left: 50px;
+  .ant-menu-submenu,
+  .ant-menu-item {
+    text-align: center;
+    min-width: 140px;
+    margin: 0px !important;
+    height: 100%;
+  }
+  .ant-menu-horizontal {
+    border-bottom: 0px;
+    height: 100%;
+  }
+}
+.header .leftNavSection .ant-menu-submenu-open {
+  color: $orange !important;
+  border-bottom: 3px solid $orange !important;
+  height: 100%;
+}
+.header .leftNavSection .ant-menu-submenu .anticon {
+  min-width: 10px;
+  margin-right: 10px;
+  font-size: 11px;
+  vertical-align: 0.1em;
+  margin-left: 10px;
+}
+.header .leftNavSection .ant-menu-submenu-title:hover,
+.ant-menu-item-selected:hover {
+  color: $orange !important ;
+}
+.header .leftNavSection .ant-menu-submenu-selected,
+.ant-menu-item-active,
+.ant-menu-item-selected {
+  color: $orange !important ;
+  border-bottom: 3px solid $orange !important ;
+}
+.header .leftNavSection .ant-menu-item-group-list .ant-menu-submenu-title:hover,
+.ant-menu-item-group-list .ant-menu-item-selected:hover {
+  // color: transparent !important;
+  color: #fff !important;
+
+  background-color: transparent !important;
+}
+.header .leftNavSection .ant-menu-item-group-list .ant-menu-submenu-selected,
+.ant-menu-item-group-list .ant-menu-item-active,
+.ant-menu-item-group-list .ant-menu-item-selected {
+  color: #fff !important;
+  font-weight: 700 !important;
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+.submenu .ant-menu-submenu-title {
+  @extend .inter-body2-medium;
+}
+
+
+
+.submenu .ant-menu {
+  background: #023047;
+}
+.submenu .ant-menu-item-group-title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 126.9%;
+
+  color: #ffffff;
+}
+.rightNavSection .ant-menu-submenu {
+  margin-right: 0px !important;
+}
+.rightNavSection .ant-menu-submenu-open {
+  color: #000 !important;
+  border-bottom: 0px solid $orange !important;
+}
+.rightNavSection .ant-menu-submenu-title:hover {
+  color: #000 !important;
+}
+.rightNavSection .ant-menu-submenu-selected {
+  color: #000 !important;
+  border-bottom: 0px solid $orange !important;
+}
+.submenu .ant-menu-item {
+  height: 20px;
+  line-height: 1.5;
+}
+.submenu .ant-menu-submenu-title {
+  @extend .inter-body2-regular;
+
+  /* identical to box height, or 18px */
+
+  /* 11 */
+
+  color: #343a40;
+}
+.Profile {
+  font-family: Inter;
+  padding: 0 20px;
+  outline: auto;
+  outline-color: #f3f3f3;
+  outline-offset: -4px;
+}
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after{
+  border-bottom: 0px;
+}
+.ant-menu-horizontal > .ant-menu-item-selected a{
+  color: #fb8500;
+}
+.ant-menu-item .ant-menu-title-content{
+color: #fff;
+}
