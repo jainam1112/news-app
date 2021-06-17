@@ -1,5 +1,5 @@
 export const environment = {
   HOST: "https://gnews.io/api",
   VERSION: "/v4",
-  API_KEY:"8e94268c0a834ae33e2561f11d04b67d"
+  API_KEY:"0080ba023e7082d4a53f0011da3259bf"
 };
